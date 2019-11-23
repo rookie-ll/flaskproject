@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery fun</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<script>
+    $.get('/',{id:1,name:'老王'},function (res) {
+        console.log(res)
+    })
+    $.post('/',{id:2,name:"老李"},function (res) {
+        console.log(res)
+    })
+    $.getJSON('/',{id:3,name:"老刘"},function (res) {
+        console.log(res)
+    })
+
+</script>
+</body>
+</html>

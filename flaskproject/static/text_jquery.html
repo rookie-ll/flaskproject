@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test jquery</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<p id="hehe">111111111</p>
+<button id="but">别特码点我</button>
+<script>
+    $.get("http://127.0.0.1:5000",function (res) {
+        console.log(res)
+        res1=res[0].名字
+        res2=JSON.stringify(res)
+
+        //$("#hehe").text(res2)
+        $("#but").click(function () {
+            $("#hehe").html(res1)
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<h1 id="hah"></h1>
+<script>
+    $.ajax({
+        url:"/",
+        type:"post",
+        contentType:"application/json",
+        data:{id:1,name:"张三",age:23},
+        beforeSend:function (xhr) {
+            console.log(xhr)
+        },
+        success:function (res) {
+            $("#hah").html(res)
+        },
+        error:function (xhr) {
+            //请求失败
+            $("#hah").html(xhr)
+        },
+        complete:function (xhr) {
+            //请求完成
+
+            console.log(xhr);
+        }
+    })
+
+</script>
+</body>
+</html>

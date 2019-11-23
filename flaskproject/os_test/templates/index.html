@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for("static",filename="index.css") }}">
+</head>
+<body>
+
+<div>张宁是嗝zz</div>
+{% for i in get_flashed_messages() %}
+    {{ i }}
+{% endfor %}
+</body>
+</html>

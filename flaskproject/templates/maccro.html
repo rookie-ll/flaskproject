@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% macro test() %}
+    <div>我我我我嚄嚄嚄嚄嚄嚄嚄</div>
+{% endmacro %}
+
+{{ test() }}
+{{ test }}
+{% macro test1(a=1,b=2) %}
+    <div>我我我{{ a }}我嚄嚄嚄{{ b }}嚄嚄嚄嚄</div>
+{% endmacro %}
+
+{{ test1() }}
+{% import "mode_maccro.html" as fun %}
+
+{{ fun.test3() }}
+</body>
+</html>

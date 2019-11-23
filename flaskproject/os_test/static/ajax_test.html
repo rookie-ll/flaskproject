@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var xhr= new XMLHttpRequest();
+    xhr.open('GET','/index/1');
+    alert("open")
+    xhr.send();
+    alert("send")
+    //正确注册事件的方式
+
+    //xhr.addEventListener(onreadystatechange,function () {
+       // alert("事件")
+       //  if(this.readyState !== 4) return;
+       // console.log(this.getAllResponseHeaders());
+       // alert("ok")
+
+   // });
+
+    xhr.onreadystatechange=function () {
+      if(this.readyState !== 4) return
+        console.log(this.responseText)
+    }
+</script>
+</body>
+</html>

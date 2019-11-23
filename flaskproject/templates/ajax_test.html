@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="list"></ul>
+<script>
+    var ullist=document.getElementById("list");
+    var xhr= new XMLHttpRequest();
+    xhr.open('GET','/emm');
+    //xhr.setRequestHeader('hello','liuliang');
+    //xhr.setRequestHeader('Content-Type','multipart/form-data')
+    xhr.send();
+    //正确注册事件的方式
+    //xhr.addEventListener('onreadystatechange',function () {
+    //     if(this.readyState !== 4) return;
+     //   console.log(this.getAllResponseHeaders());
+
+   // });
+
+    xhr.onreadystatechange=function () {
+        if(this.readyState===4) return;
+        date=JSON.parse(this.responseText)
+
+
+    }
+</script>
+</body>
+</html>
